@@ -1,16 +1,21 @@
-# Project
+# Azure Extended Zones
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This repository is the community and collaboration space for **Azure Extended Zones**.
 
-As the maintainer of this project, please make a few updates:
+## Code of conduct
+This project follows the [Microsoft Open Source Code of Conduct](CODE_OF_CONDUCT.md).
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+## Documentation
+- Product documentation (Learn): https://learn.microsoft.com/en-us/azure/extended-zones/
+- Start here in this repo: [docs/index.md](docs/index.md)
+
+## Getting help
+- Ask questions / get help: **GitHub Discussions** (recommended)
+- Bug reports: **GitHub Issues** (use the templates)
+- Support and escalation: see [SUPPORT.md](SUPPORT.md)
 
 ## Contributing
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting issues or pull requests.
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
