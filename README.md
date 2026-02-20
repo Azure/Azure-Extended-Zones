@@ -75,12 +75,7 @@ The following table lists the key Independent Software Vendors services that are
 ## Code of conduct
 This project follows the [Microsoft Open Source Code of Conduct](CODE_OF_CONDUCT.md).
 
-## Getting help
-- Ask questions / get help: **GitHub Discussions** (recommended)
-- Bug reports: **GitHub Issues** (use the templates)
-
-
-## How this repo works
+## How this repo works & Getting support
 - Use **Discussions** for questions and design conversations.
 - Use **Issues** for actionable work items (bugs, docs gaps, requests).
 - Submit changes via **Pull Requests**.
