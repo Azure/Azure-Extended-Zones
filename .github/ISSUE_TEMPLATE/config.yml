@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions / Help (Discussions)
+    url: https://github.com/Azure/Azure-Extended-Zones/discussions
+    about: Please ask and answer questions here.
+  - name: Azure Extended Zones documentation (Microsoft Learn)
+    url: https://learn.microsoft.com/en-us/azure/extended-zones/
+    about: Official product documentation.
