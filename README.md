@@ -49,7 +49,7 @@ The following diagram shows some of the industries and use cases where Azure Ext
 
 ## Availability and access
 
-See [Request access to Azure Extended Zones](request-access.md) to learn how to request access to Extended Zones. A comprehensive list of Extended Zones will be listed in the process.
+See [Request access to Azure Extended Zones](https://learn.microsoft.com/en-us/azure/extended-zones/request-access?tabs=powershell) to learn how to request access to Extended Zones. A comprehensive list of Extended Zones will be listed in the process.
 
 ## Service offerings for Azure Extended Zones
 
@@ -64,15 +64,15 @@ The following table lists key services that are available in Azure Extended Zone
 
 | Service category | Available Azure services and features |
 | ------------------ | ------------------- |
-| **Compute** | [Azure Kubernetes Service](/azure/aks/extended-zones?tabs=azure-resource-manager)* <br> [Azure Virtual Desktop](/azure/virtual-desktop/azure-extended-zones)* <br> [Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/overview) <br> [Virtual machines](/azure/virtual-machines/overview) (general purpose: A, B, D, E, and F series and GPU NVadsA10 v5 series**)|
-| **Networking** | [DDoS](../ddos-protection/ddos-protection-overview.md) (Standard protection) <br> [ExpressRoute](../expressroute/expressroute-introduction.md) <br> [Private Link](../private-link/private-link-overview.md) <br> [Standard Load Balancer](../load-balancer/load-balancer-overview.md) <br> [Standard public IP](../virtual-network/ip-services/public-ip-addresses.md) <br> [Virtual Network](../virtual-network/virtual-networks-overview.md) <br> [Virtual Network Peering](../virtual-network/virtual-network-peering-overview.md) <br> Azure Firewall (API version) |
-| **Storage** | [Managed disks](/azure/virtual-machines/managed-disks-overview) <br> - Premium SSD <br> - Standard SSD <br> [Premium Page Blobs](../storage/blobs/storage-blob-pageblob-overview.md) <br> [Premium Block Blobs](../storage/blobs/storage-blob-block-blob-premium.md) <br> [Premium Files](../storage/files/storage-files-introduction.md) <br> [Data Lake Storage Gen2 Hierarchical Namespace](../storage/blobs/data-lake-storage-namespace.md) <br>Data Lake Storage Gen2 Flat Namespace <br> [Change Feed](/azure/cosmos-db/change-feed) <br> Blob Features <br> - [SFTP](../storage/blobs/secure-file-transfer-protocol-support.md) <br> - [NFS](../storage/files/files-nfs-protocol.md) |
-| **BCDR** | [Azure Site Recovery](../site-recovery/site-recovery-overview.md)* (Extended Zone to parent region) <br> [Azure Backup](../backup/backup-overview.md) |
-| **Arc-enabled PaaS** | [ContainerApps](/azure/extended-zones/arc-enabled-workloads-container-apps)* <br> [ManagedSQL](/azure/extended-zones/arc-enabled-workloads-managed-sql)* |
-| **Other** | [Azure Policy](/azure/extended-zones/create-azure-policy)* <br> [Savings Plans](/azure/extended-zones/purchase-reservations-savings-plans) <br> [Reserved Instances](/azure/extended-zones/purchase-reservations-savings-plans) (through recommendations flow) |
+| **Compute** | Azure Kubernetes Service* <br> Azure Virtual Desktop* <br> Virtual Machine Scale Sets <br> Virtual machines (general purpose: A, B, D, E, and F series and GPU NVadsA10 v5 series**)|
+| **Networking** | DDoS (Standard protection) <br> ExpressRoute <br> Private Link <br> Standard Load Balancer <br> Standard public IP <br> Virtual Network <br> Virtual Network Peering <br> Azure Firewall (API version) |
+| **Storage** | Managed disks <br> - Premium SSD <br> - Standard SSD <br> Premium Page Blobs <br> Premium Block Blobs <br> Premium Files <br> Data Lake Storage Gen2 Hierarchical Namespace <br>Data Lake Storage Gen2 Flat Namespace <br> Change Feed <br> Blob Features <br> - SFTP <br> - NFS|
+| **BCDR** | Azure Site Recovery* (Extended Zone to parent region) <br> Azure Backup |
+| **Arc-enabled PaaS** |ContainerApps* <br> ManagedSQL* |
+| **Other** | Azure Policy* <br> Savings Plans <br> Reserved Instances (through recommendations flow) |
 
 \* While these services are GA in Azure Regions, they are currently in Preview in Azure Extended Zones.  
-\** [Learn more about Virtual Machine family series here](/azure/virtual-machines/sizes/overview?tabs=breakdownseries%2Cgeneralsizelist%2Ccomputesizelist%2Cmemorysizelist%2Cstoragesizelist%2Cgpusizelist%2Cfpgasizelist%2Chpcsizelist). You can obtain a detailed VM list in the Azure Extended Zones environment. 
+\** [Learn more about Virtual Machine family series here](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview?tabs=breakdownseries%2Cgeneralsizelist%2Ccomputesizelist%2Cmemorysizelist%2Cstoragesizelist%2Cgpusizelist%2Cfpgasizelist%2Chpcsizelist). You can obtain a detailed VM list in the Azure Extended Zones environment. 
 
 ## Supported Independent Software Vendors (ISVs)
 
