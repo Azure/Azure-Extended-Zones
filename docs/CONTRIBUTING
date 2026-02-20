@@ -1,0 +1,16 @@
+# Contributing
+
+Thanks for your interest in contributing to Azure Extended Zones community content.
+
+## Where to start
+- Questions / help: use GitHub Discussions
+- Bugs / actionable work: open a GitHub Issue using the templates
+- Doc improvements: open a Pull Request
+
+## Pull request guidelines
+- Keep PRs focused and small where possible
+- Add/adjust docs under `/docs`
+- Use clear titles and link to any related Discussion/Issue
+
+## Code of conduct
+This project follows the [Code of Conduct](CODE_OF_CONDUCT.md).
