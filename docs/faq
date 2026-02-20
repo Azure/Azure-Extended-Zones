@@ -1,0 +1,17 @@
+# FAQ
+
+## Where should I ask questions?
+Use **GitHub Discussions** for Q&A and troubleshooting questions.
+
+## Where do I report bugs?
+Use **GitHub Issues** for actionable bugs with reproduction steps.
+
+## Is this repo the official product documentation?
+No. The official documentation is on Microsoft Learn:
+https://learn.microsoft.com/en-us/azure/extended-zones/
+
+## How do I request a new feature or service support?
+Open a **Discussion** in the "Ideas" category first. If maintainers agree it is actionable for the repo, it may be converted into an Issue.
+
+## How do I report a security vulnerability?
+Follow [SECURITY.md](../SECURITY.md).
