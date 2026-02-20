@@ -1,0 +1,27 @@
+# Getting started
+
+This page helps you orient quickly and choose the right next step.
+
+## 1. Read the official docs first
+Start with:
+https://learn.microsoft.com/en-us/azure/extended-zones/
+
+## 2. Decide what you are trying to do
+Common goals:
+- Understand what Extended Zones are and where they fit
+- Check prerequisites and supported services
+- Plan networking, identity, and governance
+- Deploy / onboard an Extended Zone
+- Validate operations and monitoring
+
+## 3. Use this repo for community help
+- If you're blocked or have a “how do I…” question: open a **Discussion** (Q&A).
+- If you found a bug in docs or a reproducible product issue: open an **Issue** with:
+  - region / zone info (as applicable)
+  - subscription + resource types involved (no secrets)
+  - steps to reproduce
+  - expected vs actual behavior
+  - relevant logs/error messages
+
+## 4. Contribute improvements
+See [CONTRIBUTING.md](../CONTRIBUTING.md).
