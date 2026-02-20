@@ -12,6 +12,12 @@ This project follows the [Microsoft Open Source Code of Conduct](CODE_OF_CONDUCT
 ## Getting help
 - Ask questions / get help: **GitHub Discussions** (recommended)
 - Bug reports: **GitHub Issues** (use the templates)
+
+
+## How this repo works
+- Use **Discussions** for questions and design conversations.
+- Use **Issues** for actionable work items (bugs, docs gaps, requests).
+- Submit changes via **Pull Requests**.
 - Support and escalation: see [SUPPORT.md](SUPPORT.md)
 
 ## Contributing
