@@ -2,9 +2,19 @@
 
 This repository is the community and collaboration space for **Azure Extended Zones**.
 
+## What you'll find here
+This repository focuses on:
+- Community Q&A and troubleshooting patterns
+- Examples and guidance that complement Microsoft Learn
+- A place to propose improvements to repo docs, templates, and collaboration workflows
+
 ## Documentation
 - Product documentation (Learn): https://learn.microsoft.com/en-us/azure/extended-zones/
 - Start here in this repo: [docs/index.md](docs/index.md)
+
+## Authoritative documentation
+See the Microsoft Learn landing page:
+https://learn.microsoft.com/en-us/azure/extended-zones/
 
 # What are Azure Extended Zones?
 
