@@ -1,0 +1,44 @@
+name: Bug report
+description: Report a reproducible problem with repo content (docs/examples) or a clearly described product issue
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug.
+        For general questions, please use GitHub Discussions instead.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Provide minimal steps to reproduce.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / error messages
+      description: Paste relevant logs (remove secrets).
+    validations:
+      required: false
+  - type: input
+    id: learn_link
+    attributes:
+      label: Related Learn page (if applicable)
+      placeholder: "https://learn.microsoft.com/en-us/azure/extended-zones/..."
+    validations:
+      required: false
