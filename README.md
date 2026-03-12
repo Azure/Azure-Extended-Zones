@@ -32,7 +32,7 @@ The key scenarios that Azure Extended Zones enable are:
 
 The following diagram shows some of the industries and use cases where Azure Extended Zones can provide benefits.
 
-![Azure Extended Zone industries](azure-extended-zones-industries.png)
+![Azure Extended Zone industries](/media/azure-extended-zones-industries.png)
 
 ## Availability and access
 
@@ -44,7 +44,7 @@ Azure Extended Zones enable some key Azure services for customers to deploy. The
 
 The following diagram shows how Azure services are deployed at the Azure Extended Zones location.
 
-![Azure Extended Zone services](azure-extended-zone-services.png)
+![Azure Extended Zone services](/media/azure-extended-zones-services.png)
 
 
 The following table lists key services that are available in Azure Extended Zones:
