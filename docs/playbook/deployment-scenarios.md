@@ -7,7 +7,7 @@ Azure Extended Zones are available for deployment in the following scenarios:
 
 ---
 
-## Scenario 1: Azure Extended Zone – Standalone
+## Scenario 1: Standalone
 
 Organizations can choose to deploy workloads within the Azure Extended Zone (e.g., **Perth Extended Zone**) without the necessity of connecting to a parent region's landing zone (e.g., **Australia East**).
 
@@ -24,7 +24,7 @@ Access to workloads within the Extended Zone can be facilitated through:
 
 ![Standalone Deployment](./media/Deployment-Standalone.png)
 
-## Scenario 2: Azure Extended Zone – Region Extension
+## Scenario 2: Region Extension
 
 Azure customers with existing landing zones might consider extending their presence to include **Azure Extended Zones** (e.g., **Perth Extended Zone**).
 
