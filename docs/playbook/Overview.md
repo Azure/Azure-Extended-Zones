@@ -1,5 +1,22 @@
 # Azure Extended Zones Overview
 
+This section provides a comprehensive guide to **Azure Extended Zones**, covering:
+
+
+- [Overview of Azure Extended Zones](#overview)
+- [Key Scenarios for Azure Extended Zones](#key-scenarios-for-azure-extended-zones)
+- [Deployment Considerations for Azure Extended Zones](#deployment-considerations-for-azure-extended-zones)
+- [Deployment Scenarios](#deployment-scenarios)
+- [Service Availability](#service-availability)
+- [Independent Software Vendor Solutions](#independent-software-vendor-solutions)
+- [Service Level Agreement](#service-level-agreement)
+- [Pricing and Billing](#pricing-and-billing)
+- [Onboarding](#onboarding)
+
+---
+
+# Overview of Azure Extended Zones
+
 [Azure Extended Zones](https://learn.microsoft.com/en-us/azure/extended-zones/overview) are **small-footprint extensions of an Azure region**, strategically located in **metropolitan areas, industry hubs, or specific jurisdictions**.
 
 Extended Zones support **virtual machines, containers, storage, and a selection of Azure services**, enabling the execution of **latency-sensitive and throughput-intensive applications** closer to end users while adhering to approved **data residency requirements**.
