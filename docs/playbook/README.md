@@ -8,8 +8,8 @@ This playbook provides guidance specific to **Azure Extended Zones**, serving as
 
 - [**Overview**](./Overview.md) — Azure Extended Zones overview, key scenarios, deployment models, service availability, SLAs, pricing, and onboarding.
 - **Design Considerations**
-  - [**Networking and Connectivity**](./DesignConsiderations/Networking.md) — Virtual networks, connectivity models, DNS, load balancing, and routing.
-  - [**Security, Compliance and Data Residency**](./DesignConsiderations/Security.md) — Security benchmarks, posture management, threat detection, network security, compliance, and data residency.
-  - [**Governance and Management**](./DesignConsiderations/Governance_and_Management.md) — Resource organisation, policy, tagging, quotas, VM connectivity, and update management.
-  - [**Observability and Monitoring**](./DesignConsiderations/Observability_and_Monitoring.md) — Logging, metrics, alerting, and diagnostics.
-  - [**Business Continuity, Disaster Recovery and Migration**](./DesignConsiderations/BCDR_and_Migration.md) — High availability, disaster recovery, backup, and migration strategies.
+  - [**Networking and Connectivity**](./Networking.md) — Virtual networks, connectivity models, DNS, load balancing, and routing.
+  - [**Security, Compliance and Data Residency**](./Security.md) — Security benchmarks, posture management, threat detection, network security, compliance, and data residency.
+  - [**Governance and Management**](./Governance_and_Management.md) — Resource organisation, policy, tagging, quotas, VM connectivity, and update management.
+  - [**Observability and Monitoring**](./Observability_and_Monitoring.md) — Logging, metrics, alerting, and diagnostics.
+  - [**Business Continuity, Disaster Recovery and Migration**](./BCDR_and_Migration.md) — High availability, disaster recovery, backup, and migration strategies.
