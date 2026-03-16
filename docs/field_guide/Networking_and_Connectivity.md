@@ -45,11 +45,12 @@ When considering the use of an Azure Extended Zone in a standalone scenario, the
 
 Traditional Azure network topology configurations can be effectively deployed within an Azure Extended Zone. This includes configurations such as a single virtual network (vNet) or a Hub and Spoke network topology.
 
-*(diagram)*
+![Traditional Network Design](./media/Networking-Traditional.png)
 
 #### Azure Virtual WAN
 
-*(content to be added)*
+> [!NOTE]
+> The deployment of Azure Virtual WAN Hub within Azure Extended Zone is currently not supported.
 
 ### Azure Extended Zone - Extension
 
@@ -62,13 +63,16 @@ When considering the implementation of an Azure Extended Zone in a regional exte
 
 Traditional Azure network topology configurations can be effectively deployed within an Azure Extended Zone and extended back to the parent region's network topology. Connectivity between the Extended Zone Hub vNet and the Parent Region Hub vNet will be established via a vNet Peering connection.
 
-*(diagram)*
+![Hub and Spoke](./media/Networking-Hub-and-Spoke.png)
 
 #### Virtual WAN (Microsoft Managed) - Hybrid
 
 Traditional Azure network topology configurations can be effectively deployed within an Azure Extended Zone and extended back to a Parent Region Azure Virtual WAN. This connection would be established via a vNet peering connection.
 
-*(diagram)*
+> [!NOTE]
+> The deployment of Azure Virtual WAN Hub within Azure Extended Zone is currently not supported.
+
+![vWAN](./media/Networking-vWAN.png)
 
 ---
 
@@ -82,6 +86,12 @@ Hybrid network connectivity to resources within an Azure Extended Zone can be es
 ### ExpressRoute
 
 ExpressRoute is the preferred solution to extend an on-premises network into the Azure Extended Zone.
+
+> [!NOTE]
+> Perth Extended Zone <br>
+> While there are two Microsoft Points of Presence (PoP) in Western Australia, there is only a single ExpressRoute peering location that is located at Next DC P1.
+>
+> ![Western Australia - Express Route](./media/Networking-ER-Perth.png)
 
 The ExpressRoute circuits can be established through the following partners:
 
