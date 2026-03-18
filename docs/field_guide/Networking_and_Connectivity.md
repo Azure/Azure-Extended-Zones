@@ -85,27 +85,30 @@ Hybrid network connectivity to resources within an Azure Extended Zone can be es
 
 ### ExpressRoute
 
-ExpressRoute is the preferred solution to extend an on-premises network into the Azure Extended Zone.
-
-> [!NOTE]
-> Perth Extended Zone <br>
-> While there are two Microsoft Points of Presence (PoP) in Western Australia, there is only a single ExpressRoute peering location that is located at Next DC P1.
->
-> ![Perth - Express Route](./media/Networking-ER-Perth.png)
-
-The ExpressRoute circuits can be established through the following partners:
-
-- Equinix
-- Megaport
-- NextDC
-
-Or by using ExpressRoute Direct.
+ExpressRoute is the preferred solution to extend an on-premises network into the Azure Extended Zone. 
 
 The ExpressRoute circuit are available in the following SKUs:
 
 - **ExpressRoute Local** — currently not supported for Azure Extended Zones.
 - **ExpressRoute Standard** — provides connectivity to resources within the geopolitical boundary (e.g. Oceania includes Australia East, Australia Southeast, New Zealand North).
 - **ExpressRoute Premium** — provides global connectivity over the Microsoft core network, allowing you to link a vNet in one geopolitical region with an ExpressRoute circuit in another region.
+
+> [!NOTE]
+> **Perth Extended Zone** 
+>
+> While there are two Microsoft Points of Presence (PoP) in Western Australia, there is only a single ExpressRoute peering location that is located at Next DC P1.
+>
+> ![Perth - Express Route](./media/Networking-ER-Perth.png)
+>
+> The ExpressRoute circuits can be established through the following partners:
+>
+> - Equinix
+> - Megaport
+> - NextDC
+>
+> Or by using ExpressRoute Direct.
+
+
 
 #### Availability
 
