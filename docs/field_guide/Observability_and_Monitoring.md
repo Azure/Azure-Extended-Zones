@@ -27,7 +27,7 @@ Effective observability is essential for maintaining the health, performance, an
 
 #### Action Groups
 
-Action groups cannot be created in an Azure Extended Zone. It is recommended to create a global action group for monitoring resources within such zones. Typically, action groups are global services, with regional variations only available in select Azure regions.
+Action groups cannot be created in an Azure Extended Zone. Create a global action group to monitor resources in Extended Zones. Action groups are typically global services, with regional variants available only in select Azure regions.
 
 Global action groups can process client requests from any region. If a specific region's service is unavailable, the requests are automatically routed to and processed by services in other regions, ensuring uninterrupted service. This global approach provides a robust disaster recovery solution. Regional requests, on the other hand, rely on availability zone redundancy to comply with privacy requirements and offer a similar level of disaster recovery.
 
@@ -43,7 +43,7 @@ Service Health is supported for resources deployed to an Azure Extended Zone.
 
 ### Logs
 
-It is advisable to create Log Analytics workspaces in a parent region of your choice, as they cannot be established within an Azure Extended Zone. Be aware that additional network costs may be incurred, which can vary based on the region from which the telemetry originates and its destination. For further details, please refer to the Azure Bandwidth pricing documentation.
+Create Log Analytics workspaces in a parent region because they cannot be created within an Azure Extended Zone. Cross-region telemetry may incur additional network costs based on source and destination regions. For details, see Azure Bandwidth pricing documentation.
 
 ### Metrics
 
@@ -53,11 +53,11 @@ Azure Metrics is compatible with resources deployed within an Azure Extended Zon
 
 ### Insights
 
-Insights can be utilized with resources deployed within an Azure Extended Zone.
+Insights can be used with resources deployed within an Azure Extended Zone.
 
 ### Workbooks
 
-Workbooks can be utilized with resources deployed within an Azure Extended Zone.
+Workbooks can be used with resources deployed within an Azure Extended Zone.
 
 ---
 
@@ -65,22 +65,13 @@ Workbooks can be utilized with resources deployed within an Azure Extended Zone.
 
 ### Application Insights
 
-Application Insights can be utilized with resources deployed in an Azure Extended Zone. For additional information on Workspace-based Application Insights resources, please refer to the [Logs](#logs) section of this document.
+Application Insights can be used with resources deployed in an Azure Extended Zone. For additional information on workspace-based Application Insights resources, see the [Logs](#logs) section of this document.
 
 ### Network Watcher
-
-An Azure Network Watcher resource is automatically created when you create or update a virtual network in Azure. This resource provides a comprehensive suite of tools for monitoring and diagnosing network conditions within, to, and from Azure. These tools include:
-
-- **Monitoring:** Network Watcher offers tools to monitor resources and visualize the network topology, aiding in understanding the network configuration and relationships between resources.
-- **Diagnostics:** The resource includes various diagnostic tools to troubleshoot and diagnose network issues, such as IP flow verification, NSG diagnostics, next hop analysis, effective security rules, connection troubleshooting, packet capture, and VPN troubleshooting.
-- **Traffic Analysis:** Network Watcher allows for logging and visualizing network traffic using flow logs and traffic analytics, facilitating the understanding of network performance and the identification of anomalies.
-- **Connection Monitoring:** It provides end-to-end connection monitoring for both Azure and hybrid endpoints, offering insights into network performance between various endpoints in the network infrastructure.
 
 Network Watcher is automatically created to provide immediate access to its monitoring and diagnostic capabilities for your virtual network, eliminating the need for additional configuration. When a virtual network is created or updated in an Azure Extended Zone, the Network Watcher resource is instantiated in the parent region, which hosts the metadata of the virtual network resource group.
 
 ### Connection Monitor
-
-Connection Monitor provides unified, end-to-end connection monitoring in Network Watcher, supporting both hybrid and Azure cloud deployments. Network Watcher provides tools to monitor, diagnose, and view connectivity-related metrics for your Azure deployments.
 
 It is not possible to create a connection monitor resource in an Azure Extended Zone; however, it is possible to select a parent region for the connection monitor.
 
@@ -92,7 +83,7 @@ When creating a flow log for a network security group deployed in an Azure Exten
 
 Key considerations for this configuration include:
 
-- **Performance and Latency:** It is recommended to use a storage account in the same region as your network security group and associated virtual network resources to minimise latency and maximise performance.
+- **Performance and Latency:** Use a storage account in the same region as your network security group and associated virtual network resources to minimise latency and maximise performance.
 - **Data Transfer Costs:** Storing flow logs in a different region may incur additional data transfer costs.
 - **Compliance and Data Residency:** Ensure that your configuration adheres to any data residency requirements your organisation may have.
 
@@ -102,7 +93,7 @@ When creating a virtual network flow log for a virtual network deployed in an Az
 
 Considerations for this configuration include:
 
-- **Performance and Latency:** It is recommended to use a storage account in the same region as your virtual network and its connected resources to minimise latency and maximise performance.
+- **Performance and Latency:** Use a storage account in the same region as your virtual network and connected resources to minimise latency and maximise performance.
 - **Data Transfer Costs:** Storing flow logs in a different region may incur additional data transfer costs.
 - **Compliance and Data Residency:** Ensure that your configuration complies with any data residency requirements your organisation might have.
 
@@ -110,8 +101,8 @@ Please refer to the [Logs](#logs) section of this document for detailed informat
 
 ### Virtual Machine Boot Diagnostics
 
-The configuration of Azure boot diagnostics is supported for virtual machines deployed in an Azure Extended Zone as part of the process for creating a new virtual machine. Boot diagnostics is a crucial debugging feature for Azure virtual machines that facilitates the diagnosis of VM boot failures, allowing users to monitor the state of their VM during the boot process by collecting serial log information and screenshots.
+The configuration of Azure boot diagnostics is supported for virtual machines deployed in an Azure Extended Zone as part of the process for creating a new virtual machine. 
 
-It should be noted that the portal experience for creating a virtual machine will automatically create a storage account in the same region as the resource group's region, which is considered the parent region for a new Azure Extended Zone virtual machine. Users cannot opt to use a custom storage account instead of the pre-provisioned Microsoft-managed storage account that is created when default settings are used during virtual machine creation. Managed boot diagnostics are exclusively supported on Azure Extended Zones.
+When creating a virtual machine in the portal, Azure automatically creates a storage account in the resource group's region (the parent region for a new Azure Extended Zone virtual machine). Users cannot choose a custom storage account when default settings are used during virtual machine creation. Managed boot diagnostics are exclusively supported on Azure Extended Zones.
 
 ---

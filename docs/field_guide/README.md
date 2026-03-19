@@ -14,4 +14,4 @@ Welcome to the **Azure Extended Zones - Field Guide for Customers** which provid
   - [**Security, Compliance and Data Residency**](./Security.md) — Security benchmarks, posture management, threat detection, network security, compliance, and data residency.
   - [**Governance and Management**](./Governance_and_Management.md) — Resource organisation, policy, tagging, quotas, VM connectivity, and update management.
   - [**Observability and Monitoring**](./Observability_and_Monitoring.md) — Logging, metrics, alerting, and diagnostics.
-  - [**Business Continuity, Disaster Recovery and Migration**](./BCDR_and_Migration.md) — High availability, disaster recovery, backup, and migration strategies.
+  - [**Availability, Business Continuity, Disaster Recovery and Migration**](./Availability_BCDR_and_Migration.md) — High availability, disaster recovery, backup, and migration strategies.

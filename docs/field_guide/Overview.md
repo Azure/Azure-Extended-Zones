@@ -136,7 +136,7 @@ The following diagram illustrates the deployment model of Azure services within 
 
 Review the [Azure Extended Zone Services](https://learn.microsoft.com/en-us/azure/extended-zones/overview#service-offerings-for-azure-extended-zones) documentation for a list of services currently available.
 
-If you are planning to utilise an **Azure Extended Zone**, it is recommended to evaluate the **services and SKUs** required for your solution to confirm their availability. Contact your **Microsoft account team** for guidance on:
+If you plan to use an **Azure Extended Zone**, evaluate the **services and SKUs** required for your solution to confirm availability. Contact your **Microsoft account team** for guidance on:
 
 - Expected **service timelines**
 - **Scope of availability**

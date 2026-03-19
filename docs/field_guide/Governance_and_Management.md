@@ -45,11 +45,11 @@ The portal views for the resource type, such as the Virtual Network View, will d
 
 Subscriptions are not tied to a specific Azure region or Azure Extended Zone, though each Azure resource deploys to only one region or extended zone.
 
-Access to **Azure Extended Zones** is regulated and managed through a controlled access process. It is essential to register the subscription(s) intended for Extended Zone deployments. For further information, please refer to the [Onboarding](Overview.md/#onboarding) section.
+Access to **Azure Extended Zones** is regulated and managed through a controlled access process. Register the subscription(s) intended for Extended Zone deployments. For more information, see the [Onboarding](./Overview.md#onboarding) section.
 
 ### Management Groups
 
-Management groups are not tied to any specific Azure Region and can be utilised with both Azure Extended Zone allocated subscriptions and Azure Extended Zone deployed resources.
+Management groups are not tied to a specific Azure Region and can be used with both Azure Extended Zone-enabled subscriptions and Azure Extended Zone deployed resources.
 
 ### Resource Groups
 
@@ -69,11 +69,25 @@ Tags are supported within an **Azure Extended Zone** and are recommended as part
 
 ### Cost Management
 
-*(content to be added)*
+Cost Management and billing data are available for resources deployed in Azure Extended Zones. Use tags and subscription boundaries to improve allocation and reporting for Extended Zone workloads.
+
+Use the following practices:
+
+- Apply consistent tags for cost centre, environment, workload, and owner.
+- Separate Extended Zone workloads into dedicated subscriptions when possible.
+- Configure budgets and cost alerts at management group, subscription, and resource group scopes.
+- Review regional and inter-region data transfer charges when telemetry or traffic crosses between the Extended Zone and parent region.
 
 ### Quotas
 
-*(content to be added)*
+Quota planning is critical for Azure Extended Zones because service capacity can differ from the parent region. Validate required SKUs and quota limits before deployment.
+
+Use the following practices:
+
+- Validate compute, networking, and storage quota requirements during design.
+- Request quota increases early if projected capacity approaches current limits.
+- Track quota usage regularly to avoid deployment failures during scale events.
+- Align quota monitoring with workload growth forecasts and release plans.
 
 ## Management
 
@@ -83,7 +97,7 @@ Azure offers a comprehensive suite of tools and services designed for effective 
 
 #### Azure Bastion
 
-To connect to a virtual machine deployed in an Azure Extended Zone, it is advisable to deploy the **Azure Bastion** service to the parent region and leverage the Azure Bastion service support for global virtual network peering. The Azure Bastion Basic, Standard, and Premium SKUs support connecting to virtual machines in peered virtual networks; however, the Developer SKU does not. For additional information, please refer to [About Azure Bastion](https://learn.microsoft.com/azure/bastion/bastion-overview) on Microsoft Learn.
+To connect to a virtual machine deployed in an Azure Extended Zone, deploy **Azure Bastion** in the parent region and use Azure Bastion support for global virtual network peering. Azure Bastion Basic, Standard, and Premium SKUs support connecting to virtual machines in peered virtual networks; the Developer SKU does not. For more information, see [About Azure Bastion](https://learn.microsoft.com/azure/bastion/bastion-overview) on Microsoft Learn.
 
 ### Azure Compute Gallery Images
 
@@ -113,5 +127,5 @@ Automatic virtual machine guest patching is supported for virtual machines deplo
 
 **Azure Update Manager** is a comprehensive service designed to assist in managing and governing updates for all your machines. It provides a unified view for monitoring Windows and Linux update compliance, allowing for real-time updates or the scheduling of updates within designated maintenance windows.
 
-Integrating **Azure Update Manager** into your update management strategy is advisable for virtual machines deployed in **Azure Extended Zones**.
+Include **Azure Update Manager** in your update management strategy for virtual machines deployed in **Azure Extended Zones**.
 

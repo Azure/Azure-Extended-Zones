@@ -1,4 +1,4 @@
-# Business Continuity, Disaster Recovery and Migration
+# Availability, Business Continuity, Disaster Recovery and Migration
 
 Ensuring workloads remain resilient and recoverable is critical when deploying to an Azure Extended Zone. This section provides guidance on designing for **high availability** across compute, network, and storage services, **data protection** using Azure Backup, **disaster recovery** using Azure Site Recovery, and **migration** pathways for moving workloads into an Azure Extended Zone. It outlines the supported scenarios, current limitations, and key considerations to help organisations build robust continuity and recovery strategies.
 
@@ -8,12 +8,9 @@ Ensuring workloads remain resilient and recoverable is critical when deploying t
   - [Compute](#compute)
     - [Availability Sets](#availability-sets)
     - [Azure Virtual Machine Scale Sets](#azure-virtual-machine-scale-sets)
-  - [Network](#network)
-    - [Azure Load Balancer](#azure-load-balancer)
-    - [Azure Application Gateway](#azure-application-gateway)
   - [Storage](#storage)
     - [Locally Redundant Storage](#locally-redundant-storage)
-- [Recovery](#recovery)
+- [Business Continuity and Disaster Recovery](#business-continuity-and-disaster-recovery)
   - [Data Protection](#data-protection)
   - [Disaster Recovery](#disaster-recovery)
 - [Migration](#migration)
@@ -26,7 +23,7 @@ Ensuring workloads remain resilient and recoverable is critical when deploying t
 
 #### Availability Sets
 
-*(content to be added)*
+Availability sets will not be supported in Azure Extended Zones. For compute resilience within an Extended Zone, Virtual Machine Scale Sets should be utilized.
 
 #### Azure Virtual Machine Scale Sets
 
@@ -36,21 +33,6 @@ Virtual Machine Scale Sets allow for the creation and management of a group of l
 - Enhanced high availability and application resiliency by distributing VMs across availability zones or fault domains.
 - Automatic scaling of applications in response to fluctuating resource demand.
 - Capability to operate at large scale.
-
-### Network
-
-#### Azure Load Balancer
-
-Azure Load Balancer can significantly enhance application resilience by efficiently distributing incoming network traffic across multiple instances of an application. Key benefits include:
-
-- **Fault Tolerance:** By distributing traffic across multiple instances, Azure Load Balancer ensures that if one instance fails, traffic is automatically redirected to healthy instances, minimising downtime.
-- **Scalability:** Supports the scaling of applications by adding more instances as required to handle increased traffic, ensuring the application remains responsive under load.
-- **Health Probes:** Azure Load Balancer uses health probes to monitor the status of application instances. If an instance is found to be unhealthy, the load balancer will stop sending traffic to it until it recovers.
-- **Low Latency and High Throughput:** Provides low latency and high throughput, which is crucial for maintaining performance and reliability in high-traffic scenarios.
-
-#### Azure Application Gateway
-
-*(content to be added)*
 
 ### Storage
 
@@ -65,13 +47,13 @@ In addition, Azure Storage offers several features to enhance data resiliency:
 
 ---
 
-## Recovery
+## Business Continuity and Disaster Recovery
 
 ### Data Protection
 
-Azure Backup is an essential service for safeguarding resources within Azure, including virtual machines, Azure Files, Azure Disks, and Azure Blobs. Azure Extended Zones support the use of Azure Backup to protect assets within the Extended Zone.
+Azure Extended Zones support the use of Azure Backup to protect assets within the Extended Zone.
 
-It is important to note that Recovery Services Vaults can only be created in an Azure Region and not within Azure Extended Zones. To ensure robust data protection, it is advisable to replicate backup data to another Azure region. For Azure Extended Zones, a parent region must act as the control plane, providing oversight and management capabilities for these zones.
+Recovery Services Vaults can only be created in an Azure Region, not in an Azure Extended Zone. To improve resiliency, replicate backup data to another Azure region. For Azure Extended Zones, the parent region provides the control plane and management capabilities.
 
 The following Azure Backup scenarios are currently supported:
 
@@ -80,8 +62,6 @@ The following Azure Backup scenarios are currently supported:
 The following Azure Backup scenarios are not currently supported:
 
 - On-premises > Azure Extended Zone
-
-*(diagram)*
 
 ### Disaster Recovery
 

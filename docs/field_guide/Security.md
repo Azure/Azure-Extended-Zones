@@ -34,7 +34,7 @@ The **Microsoft Cloud Security Benchmark (MCSB)** provides prescriptive best pra
 - **Chief Information Security Officer (CISO) Workshop:** Delivers program guidance and strategies to accelerate security modernisation using Zero Trust principles.
 - **Industry and cloud service provider security best practice standards and frameworks:** Including the AWS Well-Architected Framework, Center for Internet Security (CIS) Controls, NIST, and PCI-DSS.
 
-It is recommended to consult MCSB and the service baselines for any service deployed to an **Azure Extended Zone** to plan for the security configuration of each service.
+Consult MCSB and service baselines for any service deployed to an **Azure Extended Zone** to plan the security configuration of each service.
 
 ### Cloud Security Posture Management
 
@@ -44,7 +44,7 @@ It is recommended to consult MCSB and the service baselines for any service depl
 - **Cloud Security Posture Management (CSPM):** Surfaces actionable insights to prevent breaches and strengthen security posture.
 - **Cloud Workload Protection Platform (CWPP):** Provides specific protections for servers, containers, storage, databases, and other workloads.
 
-It is advisable to utilise **Microsoft Defender for Cloud** to manage and enhance the security posture of the **Azure Extended Zone**.
+Use **Microsoft Defender for Cloud** to manage and improve the security posture of the **Azure Extended Zone**.
 
 ### Security Information and Event Management
 
@@ -54,11 +54,26 @@ It is advisable to utilise **Microsoft Defender for Cloud** to manage and enhanc
 
 ### Identity and Access Management
 
-*(content to be added)*
+Use Microsoft Entra ID, Azure RBAC, and Privileged Identity Management (PIM) to enforce least-privilege access for Azure Extended Zone workloads.
+
+Recommended practices:
+
+- Use role-based access assignments instead of broad owner-level permissions.
+- Separate platform, security, and operations responsibilities with dedicated roles.
+- Enable conditional access and multifactor authentication for privileged access paths.
+- Review privileged role assignments regularly and remove stale access.
+
 
 ### Secrets and Key Management
 
-*(content to be added)*
+Use **Azure Key Vault** in the parent region to store and manage secrets, keys, and certificates used by workloads in Azure Extended Zones.
+
+Recommended practices:
+
+- Keep application secrets out of code and configuration files.
+- Use managed identities for secret retrieval where possible.
+- Rotate secrets and certificates on a defined schedule.
+- Enable logging and alerting for secret and key access operations.
 
 ### Network Security
 
@@ -66,9 +81,7 @@ The following Azure network security services can be used to protect workloads d
 
 #### Network Security Groups
 
-An **Azure Network Security Group (NSG)** filters network traffic between Azure resources within an Azure virtual network. Each NSG comprises security rules that either allow or deny inbound and outbound network traffic based on specified source and destination, port, and protocol parameters.
-
-> **Azure Extended Zone consideration:** When a virtual machine is created within an Azure Extended Zone and the option to create an NSG is selected, the NSG will automatically be established in the resource group's region corresponding to the Azure Extended Zone VM — i.e. the parent region.
+Network Security Groups (NSG) will automatically be established in the resource group's region corresponding to the Azure Extended Zone VM — i.e. the parent region.
 
 #### Azure Private Link
 
@@ -76,31 +89,30 @@ An **Azure Network Security Group (NSG)** filters network traffic between Azure 
 
 #### DDoS Protection
 
-**Azure DDoS Protection**, combined with application design best practices, provides enhanced DDoS mitigation features to defend against DDoS attacks. It is automatically tuned to help protect your specific Azure resources in a virtual network, and is simple to enable on any new or existing virtual network with no application or resource changes required.
-
-**Azure DDoS Protection** protects at layer 3 and layer 4 network layers. For web application protection at layer 7, you need to add protection at the application layer using a WAF offering.
-
-> **Azure Extended Zone consideration:** The DDoS Protection plan must be created in the parent region rather than the Azure Extended Zone. Customers and partners should utilise the DDoS Protection plan in the parent region to safeguard their resources deployed in Azure Extended Zones.
+The DDoS Protection plan must be created in the parent region rather than the Azure Extended Zone. Use the parent region DDoS Protection plan to safeguard resources deployed in Azure Extended Zones.
 
 For protection against L7 application layer attacks, deploy **Azure Web Application Firewall (WAF)** with either **Azure Front Door Premium** or **Application Gateway WAF v2** SKU. A multi-layered security approach, incorporating network, application, and data protection, should always be implemented.
 
 #### Azure Firewall
 
-**Azure Firewall** is a cloud-native and intelligent network firewall security service designed to offer superior threat protection for cloud workloads operating within Azure. It is a fully stateful firewall service with built-in high availability and unlimited cloud scalability, providing comprehensive traffic inspection for both east-west and north-south traffic flows.
+**Azure Firewall** is in preview for Azure Extended Zones.
 
 ### Encryption
 
-*(content to be added)*
+Encryption for Azure Extended Zone workloads should align with standard Azure encryption controls for data at rest and data in transit.
+
+Recommended practices:
+
+- Use platform-managed encryption by default for supported services.
+- Use customer-managed keys where regulatory or internal policy requires key ownership.
+- Enforce TLS for application and management traffic.
+- Validate encryption configuration through policy and posture monitoring controls.
 
 ## Compliance and Data Residency
 
 ### Data Residency
 
-You might choose to utilise an **Azure Extended Zone** to meet data residency requirements for your workloads within the Microsoft cloud.
-
-It is important to note that in certain limited scenarios, data may be stored outside of your selected geography. For further details, please refer to the [Data residency in Azure](https://learn.microsoft.com/azure/reliability/availability-zones-overview) documentation.
-
-Additionally, if you employ a broad range of Azure services, multiple regions may be necessary as not all services are available in all regions or within the Azure Extended Zone. Please consult the Service availability and timelines section for more information. If your required services are not available in the parent region(s) or Azure Extended Zone, you should evaluate other regions that offer an optimal balance between data residency requirements, resource costs, and latency.
+Use an **Azure Extended Zone** when workloads require data residency within a specific geography in the Microsoft cloud.
 
 ### Compliance and Regulatory Standards
 

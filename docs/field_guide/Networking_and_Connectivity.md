@@ -114,7 +114,7 @@ The ExpressRoute circuit are available in the following SKUs:
 
 ExpressRoute is a highly reliable service, supported by a 99.95% uptime SLA. Microsoft incorporates high availability into each layer of the ExpressRoute connection, providing two separate links for each circuit, each terminating in different physical hardware inside the PoP. If the primary link becomes unavailable, the secondary link can continue to be used. Additionally, ExpressRoute PoPs are designed with a high degree of redundancy and resiliency.
 
-High availability is a shared responsibility. Clients need to utilise both physical links and regularly test their configuration and failover processes. Deployment of your ExpressRoute configuration should adhere to Microsoft's high availability guidance, ensuring that your side of the connection is free from single points of failure. Customer premises equipment (CPE) must be evaluated to meet high availability requirements, and application workloads must be capable of handling retries properly, as short, intermittent outages of the ExpressRoute connection are normal and expected within the SLA.
+High availability is a shared responsibility. Clients need to use both physical links and regularly test configuration and failover processes. Deploy your ExpressRoute configuration according to Microsoft's high availability guidance so your side of the connection is free from single points of failure. Evaluate customer premises equipment (CPE) against high availability requirements, and ensure application workloads can handle retries because short, intermittent ExpressRoute outages are normal and expected within the SLA.
 
 
 #### Disaster Recovery
@@ -169,7 +169,7 @@ To provide outbound internet access, you should implement one of the following s
 
 ### Network Virtual Appliance
 
-[Network Virtual Appliances](https://learn.microsoft.com/en-us/azure/architecture/networking/guide/nva-ha) (NVA) from ISV vendors (e.g. F5 Networks, Palo Alto, Cisco) can be utilised in the Azure Extended Zone to:
+[Network Virtual Appliances](https://learn.microsoft.com/en-us/azure/architecture/networking/guide/nva-ha) (NVA) from ISV vendors (e.g. F5 Networks, Palo Alto, Cisco) can be used in an Azure Extended Zone to:
 
 - Inspect egress traffic from virtual machines to the internet and prevent data exfiltration.
 - Inspect ingress traffic from the internet to virtual machines and prevent attacks.
@@ -181,7 +181,7 @@ Review the [Independent Software Vendor Solutions](Overview.md#independent-softw
 
 ### Azure Load Balancer
 
-Azure Standard Load Balancer (public) can be utilised to provide outbound internet access via source network address translation (SNAT) for backend instances. This configuration uses SNAT to translate a virtual machine's private IP address into the load balancer's public IP address, thereby preventing external sources from directly accessing the backend instances.
+Azure Standard Load Balancer (public) can be used to provide outbound internet access via source network address translation (SNAT) for backend instances. This configuration uses SNAT to translate a virtual machine's private IP address into the load balancer's public IP address, preventing external sources from directly accessing backend instances.
 
 ![Load Balancer](./media/Networking-LoadBalancer.png)
 
@@ -206,7 +206,7 @@ Azure Extended Zones will offer several solutions to ensure secure access to res
 
 ### Azure Load Balancer
 
-When utilising Azure Load Balancers within an Extended Zone, the following constraints must be considered:
+When using Azure Load Balancers within an Extended Zone, consider the following constraints:
 
 - Only the [Azure Standard Load Balancer](https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-overview) SKU is supported. Gateway and Basic Load Balancer SKUs are not supported.
 - Only the Regional tier is supported.
@@ -215,7 +215,7 @@ When utilising Azure Load Balancers within an Extended Zone, the following const
 
 ### Network Virtual Appliance
 
-[Network Virtual Appliances](https://learn.microsoft.com/en-us/azure/architecture/networking/guide/nva-ha) (NVA) from ISV vendors (e.g. F5 Networks, Palo Alto, Cisco) can be utilised in the Azure Extended Zone to:
+[Network Virtual Appliances](https://learn.microsoft.com/en-us/azure/architecture/networking/guide/nva-ha) (NVA) from ISV vendors (e.g. F5 Networks, Palo Alto, Cisco) can be used in an Azure Extended Zone to:
 
 - Inspect egress traffic from virtual machines to the internet and prevent data exfiltration.
 - Inspect ingress traffic from the internet to virtual machines and prevent attacks.
