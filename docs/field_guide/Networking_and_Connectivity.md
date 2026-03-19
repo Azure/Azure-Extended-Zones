@@ -1,6 +1,6 @@
 # Networking and Connectivity
 
-Networking is a foundational component of any Azure Extended Zone deployment. This section provides guidance on designing and implementing network architectures that support workloads within an Azure Extended Zone, covering **network topology** options for both standalone and region extension scenarios, **hybrid connectivity** to on-premises environments using ExpressRoute and VPN, **inbound and outbound internet access** patterns, and **name resolution** strategies. The goal is to help organisations make informed decisions that balance performance, security, and resilience when extending their network into an Azure Extended Zone.
+Networking is a foundational component of any Azure Extended Zone deployment. This section provides guidance on designing and implementing network architectures that support workloads within an Azure Extended Zone, covering **network topology** options for both standalone and region extension scenarios, **hybrid connectivity** to on-premises environments using ExpressRoute and VPN, **inbound and outbound internet access** patterns, and **name resolution** strategies. The goal is to help organizations make informed decisions that balance performance, security, and resilience when extending their network into an Azure Extended Zone.
 
 ## Table of Contents
 
@@ -121,7 +121,7 @@ High availability is a shared responsibility. Clients need to use both physical 
 
 Instances of degradation or outages at ExpressRoute peering locations or across an entire regional service can occur, often due to natural calamities. Hence, it is crucial to develop a disaster recovery plan to ensure business continuity and support mission-critical applications.
 
-To minimise the impact of a peering location failure, the following mitigation options are recommended:
+To minimize the impact of a peering location failure, the following mitigation options are recommended:
 
 - [Deploy a second ExpressRoute circuit connecting to another PoP in the parent region](https://learn.microsoft.com/azure/expressroute/expressroute-locations) (e.g. Sydney).  While this approach may result in increased latency due to cross-region traffic, this trade-off is often considered acceptable during disaster scenarios.
 

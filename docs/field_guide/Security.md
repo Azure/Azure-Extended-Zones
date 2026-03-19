@@ -77,7 +77,7 @@ Recommended practices:
 
 ### Network Security
 
-The following Azure network security services can be used to protect workloads deployed to **Azure Extended Zones**. Where the service behaviour differs in an Extended Zone context, specific considerations are noted.
+The following Azure network security services can be used to protect workloads deployed to **Azure Extended Zones**. Where the service behavior differs in an Extended Zone context, specific considerations are noted.
 
 #### Network Security Groups
 
@@ -124,7 +124,7 @@ Use an **Azure Extended Zone** when workloads require data residency within a sp
 
 ### Extended Security Updates
 
-**Extended Security Updates (ESUs)** will be provided at no additional cost for customers utilising Azure services. This includes workloads operating on **Azure Virtual Machines**, **Azure Dedicated Host**, **Azure VMware Solutions**, **Nutanix Cloud Clusters on Azure**, and **Azure Stack Hub/Edge/HCI**. In the **Azure Extended Zone**, eligible virtual machines configured to receive updates will automatically benefit from ESUs, ensuring continuous compliance and security updates without incurring extra charges.
+**Extended Security Updates (ESUs)** will be provided at no additional cost for customers using Azure services. This includes workloads operating on **Azure Virtual Machines**, **Azure Dedicated Host**, **Azure VMware Solutions**, **Nutanix Cloud Clusters on Azure**, and **Azure Stack Hub/Edge/HCI**. In the **Azure Extended Zone**, eligible virtual machines configured to receive updates will automatically benefit from ESUs, ensuring continuous compliance and security updates without incurring extra charges.
 
 For more information refer to the [Extended Security Updates FAQ](https://learn.microsoft.com/lifecycle/faq/extended-security-updates) in Microsoft Docs.
 

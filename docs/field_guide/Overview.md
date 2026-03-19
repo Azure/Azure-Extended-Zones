@@ -1,6 +1,6 @@
 # Overview
 
-This section provides an overview of **Azure Extended Zones**, covering **key scenarios**, **deployment considerations**, **service availability**, **SLAs**, **ISV solutions**, **pricing and billing**, and **onboarding**. It is intended to help organisations understand what Azure Extended Zones are, how they work, and what to evaluate before deploying workloads.
+This section provides an overview of **Azure Extended Zones**, covering **key scenarios**, **deployment considerations**, **service availability**, **SLAs**, **ISV solutions**, **pricing and billing**, and **onboarding**. It is intended to help organizations understand what Azure Extended Zones are, how they work, and what to evaluate before deploying workloads.
 
 ## Table of Contents
 
@@ -36,7 +36,7 @@ The **control plane** for services running within an Extended Zone remains in th
 Azure Extended Zones are designed to address two primary scenarios:
 
 1. **Latency**: Users may need to operate resources such as **media editing software, real-time analytics platforms, or interactive applications** remotely with **minimal latency**. Deploying workloads closer to end users reduces network round-trip time and improves performance.
-2. **Data Residency**: Some organisations require application data to remain within a **specific geographic location** due to **privacy, regulatory, or compliance requirements**. Azure Extended Zones enable workloads and data to be hosted locally while still leveraging Azure services.
+2. **Data Residency**: Some organizations require application data to remain within a **specific geographic location** due to **privacy, regulatory, or compliance requirements**. Azure Extended Zones enable workloads and data to be hosted locally while still leveraging Azure services.
 
 ### Deployment Considerations for Azure Extended Zones
 

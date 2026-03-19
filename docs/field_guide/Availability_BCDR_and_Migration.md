@@ -1,6 +1,6 @@
 # Availability, Business Continuity, Disaster Recovery and Migration
 
-Ensuring workloads remain resilient and recoverable is critical when deploying to an Azure Extended Zone. This section provides guidance on designing for **high availability** across compute, network, and storage services, **data protection** using Azure Backup, **disaster recovery** using Azure Site Recovery, and **migration** pathways for moving workloads into an Azure Extended Zone. It outlines the supported scenarios, current limitations, and key considerations to help organisations build robust continuity and recovery strategies.
+Ensuring workloads remain resilient and recoverable is critical when deploying to an Azure Extended Zone. This section provides guidance on designing for **high availability** across compute, network, and storage services, **data protection** using Azure Backup, **disaster recovery** using Azure Site Recovery, and **migration** pathways for moving workloads into an Azure Extended Zone. It outlines the supported scenarios, current limitations, and key considerations to help organizations build robust continuity and recovery strategies.
 
 ## Table of Contents
 

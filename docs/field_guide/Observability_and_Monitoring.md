@@ -83,9 +83,9 @@ When creating a flow log for a network security group deployed in an Azure Exten
 
 Key considerations for this configuration include:
 
-- **Performance and Latency:** Use a storage account in the same region as your network security group and associated virtual network resources to minimise latency and maximise performance.
+- **Performance and Latency:** Use a storage account in the same region as your network security group and associated virtual network resources to minimize latency and maximize performance.
 - **Data Transfer Costs:** Storing flow logs in a different region may incur additional data transfer costs.
-- **Compliance and Data Residency:** Ensure that your configuration adheres to any data residency requirements your organisation may have.
+- **Compliance and Data Residency:** Ensure that your configuration adheres to any data residency requirements your organization may have.
 
 ### Virtual Network Flow Logs
 
@@ -93,11 +93,11 @@ When creating a virtual network flow log for a virtual network deployed in an Az
 
 Considerations for this configuration include:
 
-- **Performance and Latency:** Use a storage account in the same region as your virtual network and connected resources to minimise latency and maximise performance.
+- **Performance and Latency:** Use a storage account in the same region as your virtual network and connected resources to minimize latency and maximize performance.
 - **Data Transfer Costs:** Storing flow logs in a different region may incur additional data transfer costs.
-- **Compliance and Data Residency:** Ensure that your configuration complies with any data residency requirements your organisation might have.
+- **Compliance and Data Residency:** Ensure that your configuration complies with any data residency requirements your organization might have.
 
-Please refer to the [Logs](#logs) section of this document for detailed information on configuring a log analytics workspace for traffic analysis.
+Please refer to the [Logs](#logs) section of this document for detailed information on configuring a Log Analytics workspace for traffic analysis.
 
 ### Virtual Machine Boot Diagnostics
 

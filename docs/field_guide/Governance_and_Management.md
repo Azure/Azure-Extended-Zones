@@ -1,10 +1,10 @@
 # Governance and Management
 
-This section provides guidance on **governance** and **management** considerations for workloads deployed to **Azure Extended Zones**. It covers resource organisation, policy enforcement, tagging strategies, cost management, quotas, virtual machine connectivity, image management, and update management. Where applicable, Azure Extended Zone–specific constraints and recommendations are highlighted.
+This section provides guidance on **governance** and **management** considerations for workloads deployed to **Azure Extended Zones**. It covers resource organization, policy enforcement, tagging strategies, cost management, quotas, virtual machine connectivity, image management, and update management. Where applicable, Azure Extended Zone–specific constraints and recommendations are highlighted.
 
 ## Table of Contents
 
-- [Resource Organisation](#resource-organisation)
+- [Resource Organization](#resource-organization)
   - [Parent Region](#parent-region)
   - [Subscriptions](#subscriptions)
   - [Management Groups](#management-groups)
@@ -24,9 +24,9 @@ This section provides guidance on **governance** and **management** consideratio
     - [Automatic VM Guest Patching](#automatic-vm-guest-patching)
     - [Azure Update Manager](#azure-update-manager)
 
-## Resource Organisation
+## Resource Organization
 
-Resource organisation within Azure necessitates a structured approach to secure, manage, and optimise cloud resources effectively. This section covers the concept of a parent region, subscriptions, management groups, resource groups, and naming conventions.
+Resource organization within Azure necessitates a structured approach to secure, manage, and optimize cloud resources effectively. This section covers the concept of a parent region, subscriptions, management groups, resource groups, and naming conventions.
 
 ### Parent Region
 
@@ -59,7 +59,7 @@ Creating a resource group within an Azure Extended Zone location is not possible
 
 ### Azure Policy
 
-**Azure Policy** assists in enforcing organisational standards and assessing compliance at scale. Through its compliance dashboard, it provides an aggregated view for evaluating the overall state of the environment, with the capability to drill down to per-resource and per-policy details. It also aids in bringing resources into compliance through bulk remediation for existing resources and automatic remediation for new resources.
+**Azure Policy** assists in enforcing organizational standards and assessing compliance at scale. Through its compliance dashboard, it provides an aggregated view for evaluating the overall state of the environment, with the capability to drill down to per-resource and per-policy details. It also aids in bringing resources into compliance through bulk remediation for existing resources and automatic remediation for new resources.
 
 **Azure Policy** is a non-regional service and will evaluate resources deployed to an **Azure Extended Zone** for adherence to assigned policy definitions.
 
@@ -73,7 +73,7 @@ Cost Management and billing data are available for resources deployed in Azure E
 
 Use the following practices:
 
-- Apply consistent tags for cost centre, environment, workload, and owner.
+- Apply consistent tags for cost center, environment, workload, and owner.
 - Separate Extended Zone workloads into dedicated subscriptions when possible.
 - Configure budgets and cost alerts at management group, subscription, and resource group scopes.
 - Review regional and inter-region data transfer charges when telemetry or traffic crosses between the Extended Zone and parent region.
@@ -91,7 +91,7 @@ Use the following practices:
 
 ## Management
 
-Azure offers a comprehensive suite of tools and services designed for effective cloud resource management. The management capabilities in Azure encompass a broad range of tasks aimed at maintaining the health, performance, and security of your applications and infrastructure. These tasks include deploying and configuring resources, monitoring their performance, and ensuring compliance with organisational policies.
+Azure offers a comprehensive suite of tools and services designed for effective cloud resource management. The management capabilities in Azure encompass a broad range of tasks aimed at maintaining the health, performance, and security of your applications and infrastructure. These tasks include deploying and configuring resources, monitoring their performance, and ensuring compliance with organizational policies.
 
 ### Connecting to Virtual Machines
 
@@ -103,7 +103,7 @@ To connect to a virtual machine deployed in an Azure Extended Zone, deploy **Azu
 
 **Azure Compute Gallery** images serve as a valuable resource for building virtual machines within **Azure Extended Zones**. However, it is important to note that this functionality is not yet accessible through the Azure Portal (UX).
 
-Azure Compute Gallery images hosted in a primary Azure region can be replicated to Azure Extended Zones by utilising the appropriate command, as demonstrated below:
+Azure Compute Gallery images hosted in a primary Azure region can be replicated to Azure Extended Zones by using the appropriate command, as demonstrated below:
 
 ```bash
 az sig image-version update --resource-group MyResourceGroup --gallery-name MyGallery --gallery-image-definition PlaceholderImage --gallery-image-version 0.0.1 --target-edge-zones australiaeast=perth=1=standardssd_lrs
