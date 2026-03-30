@@ -121,9 +121,11 @@ High availability is a shared responsibility. Clients need to use both physical 
 
 Instances of degradation or outages at ExpressRoute peering locations or across an entire regional service can occur, often due to natural calamities. Hence, it is crucial to develop a disaster recovery plan to ensure business continuity and support mission-critical applications.
 
+##### Scenario: Local ExpressRoute PoP Outage
+
 To minimize the impact of a peering location failure, the following mitigation options are recommended:
 
-- [Deploy a second ExpressRoute circuit connecting to another PoP in the parent region](https://learn.microsoft.com/azure/expressroute/expressroute-locations) (e.g. Sydney).  While this approach may result in increased latency due to cross-region traffic, this trade-off is often considered acceptable during disaster scenarios.
+- [Deploy a second ExpressRoute circuit connecting to a PoP in the parent region](https://learn.microsoft.com/azure/expressroute/expressroute-locations) (e.g. Sydney).  While this approach may result in increased latency due to cross-region traffic, this trade-off is often considered acceptable during disaster scenarios.
 
 ![Multi Region - ExpressRoute](./media/Networking-ER-Multi.png)
 

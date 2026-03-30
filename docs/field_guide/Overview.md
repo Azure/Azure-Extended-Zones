@@ -19,15 +19,15 @@ This section provides an overview of **Azure Extended Zones**, covering **key sc
 
 ## Overview of Azure Extended Zones
 
-[Azure Extended Zones](https://learn.microsoft.com/en-us/azure/extended-zones/overview) are **small-footprint extensions of an Azure region**, strategically located in **metropolitan areas, industry hubs, or specific jurisdictions**.
+[Azure Extended Zones](https://learn.microsoft.com/en-us/azure/extended-zones/overview) are small-footprint extensions of an Azure region, strategically located in metropolitan areas, industry hubs, or specific jurisdictions.
 
-Extended Zones support **virtual machines, containers, storage, and a selection of Azure services**, enabling the execution of **latency-sensitive and throughput-intensive applications** closer to end users while adhering to approved **data residency requirements**.
+Extended Zones support virtual machines, containers, storage, and a selection of Azure services, enabling the execution of latency-sensitive and throughput-intensive applications closer to end users while adhering to approved data residency requirements.
 
 ![Diagram showing Azure Extended Zone architecture with parent region and Extended Zone site](./media/AzureExtendedZone01.png)
 
-Extended Zones are integrated into the **Microsoft global network**, providing **secure, reliable, high-bandwidth connectivity** between applications running in an Extended Zone and their users.
+Extended Zones are integrated into the Microsoft global network, providing secure, reliable, high-bandwidth connectivity between applications running in an Extended Zone and their users.
 
-Azure customers can provision and manage Azure Extended Zone resources, services, and workloads through the **Azure portal and other core Azure management tools**.
+Azure customers can provision and manage Azure Extended Zone resources, services, and workloads through the Azure portal and other core Azure management tools.
 
 The **control plane** for services running within an Extended Zone remains in the **parent Azure region**, while the **data plane** is deployed at the **Extended Zone site**, resulting in a **smaller Azure footprint located closer to users and workloads**.
 
@@ -35,12 +35,12 @@ The **control plane** for services running within an Extended Zone remains in th
 
 Azure Extended Zones are designed to address two primary scenarios:
 
-1. **Latency**: Users may need to operate resources such as **media editing software, real-time analytics platforms, or interactive applications** remotely with **minimal latency**. Deploying workloads closer to end users reduces network round-trip time and improves performance.
-2. **Data Residency**: Some organizations require application data to remain within a **specific geographic location** due to **privacy, regulatory, or compliance requirements**. Azure Extended Zones enable workloads and data to be hosted locally while still leveraging Azure services.
+1. **Latency**: Users may need to operate resources such as media editing software, real-time analytics platforms, or interactive applications remotely with minimal latency. Deploying workloads closer to end users reduces network round-trip time and improves performance.
+2. **Data Residency**: Some organizations require application data to remain within a specific geographic location due to privacy, regulatory, or compliance requirements. Azure Extended Zones enable workloads and data to be hosted locally while still leveraging Azure services.
 
 ### Deployment Considerations for Azure Extended Zones
 
-When considering the deployment of workloads to an **Azure Extended Zone**, the following should be evaluated.
+When considering the deployment of workloads to an Azure Extended Zone, the following should be evaluated.
 
 1. What is your timeline?
 
@@ -65,7 +65,7 @@ When considering the deployment of workloads to an **Azure Extended Zone**, the 
 
 3. How will your use of services grow?
 
-    Planning for future capacity requirements** is important.
+    Planning for future capacity requirements is important.
 
     To support capacity planning for Azure Extended Zones, Microsoft monitors anticipated growth in service consumption. Organisations should discuss their expected usage patterns and future growth projections with Microsoft or their primary partner as early as possible to ensure capacity is available.
 
@@ -97,7 +97,6 @@ Access to workloads within the Extended Zone can be facilitated through:
 #### Private Connectivity
 - **ExpressRoute**
 - **Site-to-Site VPN**¹
-  - *Note:* Azure VPN is a roadmap item for Azure Extended Zones. Site-to-Site VPN connectivity would currently need to be implemented using a **third-party solution**.
 
 #### Public Connectivity
 - **External Load Balancer**
@@ -142,8 +141,9 @@ The following table lists key services that are available in Azure Extended Zone
 | **Compute** | [Azure Kubernetes Service](https://learn.microsoft.com/en-us/azure/extended-zones/deploy-aks-cluster)* <br> [Azure Virtual Desktop](https://learn.microsoft.com/en-au/azure/virtual-desktop/azure-extended-zones)* <br> Virtual Machine Scale Sets <br> [Virtual machines (general purpose: A, B, D, E, and F series and GPU NVadsA10 v5 series**)](https://learn.microsoft.com/en-us/azure/extended-zones/deploy-vm-portal)|
 | **Networking** | DDoS (Standard protection) <br> ExpressRoute <br> Private Link <br> Standard Load Balancer <br> Standard public IP <br> Virtual Network <br> Virtual Network Peering <br> Azure Firewall (API version) |
 | **Storage** | Managed disks <br> - Premium SSD <br> - Standard SSD <br> [Storage Account](https://learn.microsoft.com/en-us/azure/extended-zones/create-storage-account) <br> - Premium Page Blobs <br> - Premium Block Blobs <br> - Premium Files <br> - Data Lake Storage Gen2 Hierarchical Namespace <br> - Data Lake Storage Gen2 Flat Namespace <br> - Change Feed <br> - Blob Features <br> - SFTP <br> - NFS|
+| Security | Key Vault |
 | **BCDR** | Azure Site Recovery* (Extended Zone to parent region) <br> Azure Backup |
-| **Arc-enabled PaaS** |ContainerApps* <br> ManagedSQL* |
+| **Arc-enabled PaaS** | [ContainerApps](https://learn.microsoft.com/en-us/azure/extended-zones/arc-enabled-workloads-container-apps)* <br> [ManagedSQL](https://learn.microsoft.com/en-us/azure/extended-zones/arc-enabled-workloads-managed-sql)* |
 | **Other** | Azure Policy* <br> Savings Plans <br> Reserved Instances (through recommendations flow) |
 
 \* While these services are GA in Azure Regions, they are currently in Preview in Azure Extended Zones.  
@@ -218,4 +218,4 @@ Access to Azure Extended Zones will be restricted and managed through a controll
 Comprehensive guidelines on how to request access to the Azure Extended Zone can be found in the [Request access to an Azure Extended Zone](https://learn.microsoft.com/en-au/azure/extended-zones/request-access?tabs=powershell) article.
 
 
-¹ *Note: Azure VPN is a roadmap item for Azure Extended Zones. Site-to-Site VPN connectivity would currently need to be implemented using a third-party solution*
+¹*Azure VPN is a roadmap item for Azure Extended Zones. Site-to-Site VPN connectivity would currently need to be implemented using a third-party solution*
