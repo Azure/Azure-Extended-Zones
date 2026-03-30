@@ -44,8 +44,8 @@ When considering the deployment of workloads to an **Azure Extended Zone**, the 
 
 1. What is your timeline?
 
-    Services within Azure Extended Zones are released **in phases**.
-    If your project has a **strict delivery timeline**, ensure it aligns with the **service availability schedule** and includes contingency time for potential delays.
+    Services within Azure Extended Zones are released in phases.
+    If your project has a strict delivery timeline, ensure it aligns with the service availability schedule and includes contingency time for potential delays.
 
     For additional information, refer to [**Service availability**](#service-availability).
 
@@ -55,31 +55,31 @@ When considering the deployment of workloads to an **Azure Extended Zone**, the 
     - Virtual Machines
     - Containers
     - Storage
-    - A **select range of Azure services**
+    - A select range of Azure services
 
-    Confirm whether your solution requires **services that may not yet be available** within the Extended Zone.
+    Confirm whether your solution requires services that may not yet be available within the Extended Zone.
 
-    If your architecture relies on **third-party solutions from the Azure Marketplace**, those services may not be available until the [**independent software vendor (ISV)**](#independent-software-vendor-solutions) has validated them for deployment within the Extended Zone.
+    If your architecture relies on third-party solutions from the Azure Marketplace, those services may not be available until the [independent software vendor (ISV)](#independent-software-vendor-solutions) has validated them for deployment within the Extended Zone.
 
     For additional information, refer to [**Service availability**](#service-availability).
 
 3. How will your use of services grow?
 
-    Planning for **future capacity requirements** is important.
+    Planning for future capacity requirements** is important.
 
-    To support capacity planning for Azure Extended Zones, Microsoft monitors **anticipated growth in service consumption**. Organisations should discuss their **expected usage patterns and future growth projections** with Microsoft or their primary partner as early as possible to ensure capacity is available.
+    To support capacity planning for Azure Extended Zones, Microsoft monitors anticipated growth in service consumption. Organisations should discuss their expected usage patterns and future growth projections with Microsoft or their primary partner as early as possible to ensure capacity is available.
 
 4. What are your high availability and disaster recovery requirements?
 
-    Azure Extended Zones **do not currently support Availability Zones**.
+    Azure Extended Zones **do not support Availability Zones**.
 
-    However, additional Azure services can be used to meet **high availability and disaster recovery (HA/DR)** requirements, such as:
+    However, additional Azure services can be used to meet high availability and disaster recovery (HA/DR) requirements, such as:
 
-    - Replication to a **parent Azure region**
+    - Replication to a parent Azure region
     - Backup and recovery services
     - Cross-region failover architectures
 
-    Designing appropriate **HA/DR strategies** is critical when deploying workloads in an Extended Zone.
+    Designing appropriate HA/DR strategies is critical when deploying workloads in an Extended Zone.
 
 ## Deployment Scenarios
 
@@ -90,13 +90,13 @@ Azure Extended Zones are available for deployment in the following scenarios:
 
 ### Standalone
 
-Organisations can choose to deploy workloads within the Azure Extended Zone (e.g., **Perth Extended Zone**) without the necessity of connecting to a parent region's landing zone (e.g., **Australia East**).
+Organisations can choose to deploy workloads within the Azure Extended Zone (e.g., Perth Extended Zone) without the necessity of connecting to a parent region's landing zone (e.g., Australia East).
 
 Access to workloads within the Extended Zone can be facilitated through:
 
 #### Private Connectivity
 - **ExpressRoute**
-- **Site-to-Site VPN**
+- **Site-to-Site VPN**¹
   - *Note:* Azure VPN is a roadmap item for Azure Extended Zones. Site-to-Site VPN connectivity would currently need to be implemented using a **third-party solution**.
 
 #### Public Connectivity
@@ -107,7 +107,7 @@ Access to workloads within the Extended Zone can be facilitated through:
 
 ### Region Extension
 
-Azure customers with existing landing zones might consider extending their presence to include **Azure Extended Zones** (e.g., **Perth Extended Zone**).
+Azure customers with existing landing zones might consider extending their presence to include Azure Extended Zones (e.g., Perth Extended Zone).
 
 Access to workloads within the Extended Zone can be facilitated through:
 
@@ -120,9 +120,9 @@ Access to workloads within the Extended Zone can be facilitated through:
 - **Virtual machine with a Public IP**
 
 #### Microsoft Backbone Connectivity
-- **VNet Peering** to an existing landing zone in a region (e.g., Australia East), allowing traffic to traverse the **Microsoft network backbone**.
+- **VNet Peering** to an existing landing zone in a region (e.g., Australia East), allowing traffic to traverse the Microsoft network backbone.
 
-¹ *Note: Azure VPN is a roadmap item for Azure Extended Zones. Site-to-Site VPN connectivity would currently need to be implemented using a third-party solution*
+
 
 ![Region extension deployment showing VNet peering between parent region and Extended Zone](./media/Deployment-Extension.png)
 
@@ -134,17 +134,30 @@ The following diagram illustrates the deployment model of Azure services within 
 
 ![Diagram of Azure services available within an Azure Extended Zone](/media/azure-extended-zones-services.png)
 
+
+The following table lists key services that are available in Azure Extended Zones:
+
+| Service category | Available Azure services and features |
+| ------------------ | ------------------- |
+| **Compute** | [Azure Kubernetes Service*](https://learn.microsoft.com/en-us/azure/extended-zones/deploy-aks-cluster) <br> [Azure Virtual Desktop*](https://learn.microsoft.com/en-au/azure/virtual-desktop/azure-extended-zones) <br> Virtual Machine Scale Sets <br> [Virtual machines (general purpose: A, B, D, E, and F series and GPU NVadsA10 v5 series**)](https://learn.microsoft.com/en-us/azure/extended-zones/deploy-vm-portal)|
+| **Networking** | DDoS (Standard protection) <br> ExpressRoute <br> Private Link <br> Standard Load Balancer <br> Standard public IP <br> Virtual Network <br> Virtual Network Peering <br> Azure Firewall (API version) |
+| **Storage** | Managed disks <br> - Premium SSD <br> - Standard SSD <br> [Storage Account](https://learn.microsoft.com/en-us/azure/extended-zones/create-storage-account) <br> - Premium Page Blobs <br> - Premium Block Blobs <br> - Premium Files <br> - Data Lake Storage Gen2 Hierarchical Namespace <br> - Data Lake Storage Gen2 Flat Namespace <br> - Change Feed <br> - Blob Features <br> - SFTP <br> - NFS|
+| **BCDR** | Azure Site Recovery* (Extended Zone to parent region) <br> Azure Backup |
+| **Arc-enabled PaaS** |ContainerApps* <br> ManagedSQL* |
+| **Other** | Azure Policy* <br> Savings Plans <br> Reserved Instances (through recommendations flow) |
+
+\* While these services are GA in Azure Regions, they are currently in Preview in Azure Extended Zones.  
+\** [Learn more about Virtual Machine family series here](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview?tabs=breakdownseries%2Cgeneralsizelist%2Ccomputesizelist%2Cmemorysizelist%2Cstoragesizelist%2Cgpusizelist%2Cfpgasizelist%2Chpcsizelist). You can obtain a detailed VM list in the Azure Extended Zones environment. 
+
 Review the [Azure Extended Zone Services](https://learn.microsoft.com/en-us/azure/extended-zones/overview#service-offerings-for-azure-extended-zones) documentation for a list of services currently available.
 
-If you plan to use an **Azure Extended Zone**, evaluate the **services and SKUs** required for your solution to confirm availability. Contact your **Microsoft account team** for guidance on:
+If you plan to use an Azure Extended Zone, evaluate the services and SKUs required for your solution to confirm availability. Contact your **Microsoft account team** for guidance on:
 
-- Expected **service timelines**
-- **Scope of availability**
-- Potential **alternative solutions**
+- Expected service timelines
+- Scope of availability
+- Potential alternative solutions
 
 ## Service Level Agreement
-
-**Service Level Agreements (SLAs)** are Microsoft's commitment to provide a certain level of service quality, including uptime and connectivity, for their online services. These agreements capture the performance standards that customers can expect from Azure services and specify the compensation customers are entitled to if these standards are not met. In the event of an SLA breach, customers can submit claims to Microsoft. If the claim is validated, customers may receive service credits, which are applied towards future usage of the same service.
 
 Extended Zones are **single-zone locations**, meaning there is no zone redundancy or multi-zone fault tolerance available. Workloads operate within a single fault domain; the SLAs below reflect this constraint.
 
@@ -180,19 +193,19 @@ For details on each Service SLA and how it's calculated, please refer to the [Mi
 
 Azure Extended Zones usage is priced separately from Azure Regions. The services available within the Extended Zone will be offered at a premium price.
 
-- Public Preview pricing will align with General Availability rates.
 - **Enterprise Agreement (EA)** discounts will apply.
 - **Cloud Service Provider (CSP)** agreements can be used for Azure Extended Zones.
-- Cost savings plans and Reserved Instances are not currently supported.
+- [**Cost savings plans** and **Reserved Instances**](https://learn.microsoft.com/en-us/azure/extended-zones/purchase-reservations-savings-plans) are supported.
 
 > [!NOTE]
 > Azure calculator does not currently support Azure Extended Zones.
 
 ### Network Ingress and Egress Charges
 
-- Data Centre Data Transfer pricing for Perth Extended Zones, excluding transfers explicitly covered under Content Delivery Network and ExpressRoute pricing, is categorised as Inter-Region.
-- ExpressRoute Data Transfer pricing for Perth Extended Zones falls under Zone 2 classification.
-- Virtual Network Peering costs for vNets peered between the Perth Extended Zone and Australia East are treated as within the same region.
+- Data Centre Data Transfer pricing is categorised as Inter-Region *(excludes transfers explicitly covered under Content Delivery Network and ExpressRoute pricing)*.
+- ExpressRoute Data Transfer pricing
+  -  Perth Extended Zones falls under Zone 2 classification.
+- Virtual Network Peering costs for vNets peered between the Extended Zone and Parent region are treated as within the same region.
 
 Work with your Microsoft account team to obtain detailed pricing information for the Azure Extended Zone.
 
@@ -203,3 +216,6 @@ Access to Azure Extended Zones will be restricted and managed through a controll
 ![Diagram showing the three-step onboarding process for Azure Extended Zones](./media/AEZ-Access.png)
 
 Comprehensive guidelines on how to request access to the Azure Extended Zone can be found in the [Request access to an Azure Extended Zone](https://learn.microsoft.com/en-au/azure/extended-zones/request-access?tabs=powershell) article.
+
+
+¹ *Note: Azure VPN is a roadmap item for Azure Extended Zones. Site-to-Site VPN connectivity would currently need to be implemented using a third-party solution*
