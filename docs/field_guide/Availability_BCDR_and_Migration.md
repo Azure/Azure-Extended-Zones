@@ -10,6 +10,7 @@ Ensuring workloads remain resilient and recoverable is critical when deploying t
     - [Azure Virtual Machine Scale Sets](#azure-virtual-machine-scale-sets)
   - [Storage](#storage)
     - [Locally Redundant Storage](#locally-redundant-storage)
+  - [Networking](#networking)
 - [Business Continuity and Disaster Recovery](#business-continuity-and-disaster-recovery)
   - [Data Protection](#data-protection)
   - [Disaster Recovery](#disaster-recovery)
@@ -44,6 +45,10 @@ In addition, Azure Storage offers several features to enhance data resiliency:
 
 - **Soft Delete:** Helps protect your data from accidental or malicious deletion. When enabled, deleted blobs or containers are retained for a specified period, allowing you to restore them if necessary.
 - **Versioning:** Blob versioning automatically maintains previous versions of an object. Each time a blob is modified, a new version is created, allowing you to restore previous versions if necessary.
+
+### Networking
+
+For network resilience guidance — including ExpressRoute high availability, redundancy considerations, and disaster recovery options such as deploying a secondary circuit to the parent region — refer to the [Networking and Connectivity](./Networking_and_Connectivity.md#expressroute) section.
 
 ---
 

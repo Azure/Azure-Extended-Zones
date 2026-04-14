@@ -166,7 +166,7 @@ To provide outbound internet access, you should implement one of the following s
 
 > [!NOTE]
 > 
-> - Azure Firewall *(Preview)*
+> - [Azure Firewall *(Preview)*](./preview_services/AzureFirewall.md)
 > - NAT Gateway *(Roadmap)*
 
 ### Network Virtual Appliance

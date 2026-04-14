@@ -131,7 +131,7 @@ Azure Extended Zones enable the deployment of key Azure services closer to users
 
 The following diagram illustrates the deployment model of Azure services within an **Azure Extended Zone**.
 
-![Diagram of Azure services available within an Azure Extended Zone](/media/azure-extended-zones-services.png)
+![Diagram of Azure services available within an Azure Extended Zone](../../media/azure-extended-zones-services.png)
 
 
 The following table lists key services that are available in Azure Extended Zones:
@@ -139,7 +139,7 @@ The following table lists key services that are available in Azure Extended Zone
 | Service category | Available Azure services and features |
 | ------------------ | ------------------- |
 | **Compute** | [Azure Kubernetes Service](https://learn.microsoft.com/en-us/azure/extended-zones/deploy-aks-cluster)* <br> [Azure Virtual Desktop](https://learn.microsoft.com/en-au/azure/virtual-desktop/azure-extended-zones)* <br> Virtual Machine Scale Sets <br> [Virtual machines (general purpose: A, B, D, E, and F series and GPU NVadsA10 v5 series**)](https://learn.microsoft.com/en-us/azure/extended-zones/deploy-vm-portal)|
-| **Networking** | DDoS (Standard protection) <br> ExpressRoute <br> Private Link <br> Standard Load Balancer <br> Standard public IP <br> Virtual Network <br> Virtual Network Peering <br> Azure Firewall (API version) |
+| **Networking** | DDoS (Standard protection) <br> ExpressRoute <br> Private Link <br> Standard Load Balancer <br> Standard public IP <br> Virtual Network <br> Virtual Network Peering <br> Azure Firewall* (API version) |
 | **Storage** | Managed disks <br> - Premium SSD <br> - Standard SSD <br> [Storage Account](https://learn.microsoft.com/en-us/azure/extended-zones/create-storage-account) <br> - Premium Page Blobs <br> - Premium Block Blobs <br> - Premium Files <br> - Data Lake Storage Gen2 Hierarchical Namespace <br> - Data Lake Storage Gen2 Flat Namespace <br> - Change Feed <br> - Blob Features <br> - SFTP <br> - NFS|
 | Security | Key Vault |
 | **BCDR** | Azure Site Recovery* (Extended Zone to parent region) <br> Azure Backup |
@@ -188,6 +188,9 @@ For details on each Service SLA and how it's calculated, please refer to the [Mi
 | NetApp | CVO | ISV validating |
 | Palo Alto | VM-Series Next-Generation Firewall from Palo Alto Networks | ISV validating |
 | Red Hat | Red Hat Enterprise Linux | ISV validating |
+
+> [!NOTE]
+> ISV validation statuses listed above were last confirmed in 2024. Contact your Microsoft account team for the latest validation status of these offerings.
 
 ## Pricing and Billing
 
