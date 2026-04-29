@@ -40,7 +40,7 @@ The DDoS Protection plan must be created in the parent region rather than the Az
 
 #### Azure Firewall
 
-[**Azure Firewall**](./preview_services/AzureFirewall.md) is in preview for Azure Extended Zones.
+[**Azure Firewall**](https://learn.microsoft.com/en-us/azure/extended-zones/deploy-azure-firewall) is in preview for Azure Extended Zones.
 
 ## Compliance and Data Residency
 
