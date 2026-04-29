@@ -67,7 +67,7 @@ When considering the deployment of workloads to an Azure Extended Zone, the foll
 
     Planning for future capacity requirements is important.
 
-    To support capacity planning for Azure Extended Zones, Microsoft monitors anticipated growth in service consumption. Organisations should discuss their expected usage patterns and future growth projections with Microsoft or their primary partner as early as possible to ensure capacity is available.
+    To support capacity planning for Azure Extended Zones, Microsoft monitors anticipated growth in service consumption. Organizations should discuss their expected usage patterns and future growth projections with Microsoft or their primary partner as early as possible to ensure capacity is available.
 
 4. What are your high availability and disaster recovery requirements?
 
@@ -90,7 +90,7 @@ Azure Extended Zones are available for deployment in the following scenarios:
 
 ### Standalone
 
-Organisations can choose to deploy workloads within the Azure Extended Zone (e.g., Perth Extended Zone) without the necessity of connecting to a parent region's landing zone (e.g., Australia East).
+Organizations can choose to deploy workloads within the Azure Extended Zone (e.g., Perth Extended Zone) without the necessity of connecting to a parent region's landing zone (e.g., Australia East).
 
 Access to workloads within the Extended Zone can be facilitated through:
 
@@ -205,7 +205,7 @@ Azure Extended Zones usage is priced separately from Azure Regions. The services
 
 ### Network Ingress and Egress Charges
 
-- Data Centre Data Transfer pricing is categorised as Inter-Region *(excludes transfers explicitly covered under Content Delivery Network and ExpressRoute pricing)*.
+- Data Center Data Transfer pricing is categorized as Inter-Region *(excludes transfers explicitly covered under Content Delivery Network and ExpressRoute pricing)*.
 - ExpressRoute Data Transfer pricing
   -  Perth Extended Zones falls under Zone 2 classification.
 - Virtual Network Peering costs for vNets peered between the Extended Zone and Parent region are treated as within the same region.

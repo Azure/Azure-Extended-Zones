@@ -30,7 +30,7 @@ The following Azure network security services can be used to protect workloads d
 
 #### Network Security Groups
 
-Network Security Groups (NSG) can be utilised to protect workloads in the Extended Zone, however, will need to be created in the parent region.
+Network Security Groups (NSG) can be utilized to protect workloads in the Extended Zone, however, will need to be created in the parent region.
 
 
 #### DDoS Protection
