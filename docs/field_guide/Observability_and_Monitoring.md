@@ -105,4 +105,3 @@ The configuration of Azure boot diagnostics is supported for virtual machines de
 
 When creating a virtual machine in the portal, Azure automatically creates a storage account in the resource group's region (the parent region for a new Azure Extended Zone virtual machine). Users cannot choose a custom storage account when default settings are used during virtual machine creation. Managed boot diagnostics are exclusively supported on Azure Extended Zones.
 
----
