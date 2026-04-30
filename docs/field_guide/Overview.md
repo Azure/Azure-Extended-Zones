@@ -129,26 +129,6 @@ Access to workloads within the Extended Zone can be facilitated through:
 
 Azure Extended Zones enable the deployment of key Azure services closer to users and workloads. The **control plane** for these services operates in the **primary Azure region**, while the **data plane** is deployed at the **Extended Zone site**, resulting in a streamlined Azure footprint.
 
-The following diagram illustrates the deployment model of Azure services within an **Azure Extended Zone**.
-
-![Diagram of Azure services available within an Azure Extended Zone](../../media/azure-extended-zones-services.png)
-
-
-The following table lists key services that are available in Azure Extended Zones:
-
-| Service category | Available Azure services and features |
-| ------------------ | ------------------- |
-| **Compute** | [Azure Kubernetes Service](https://learn.microsoft.com/en-us/azure/extended-zones/deploy-aks-cluster)* <br> [Azure Virtual Desktop](https://learn.microsoft.com/en-au/azure/virtual-desktop/azure-extended-zones)* <br> Virtual Machine Scale Sets <br> [Virtual machines (general purpose: A, B, D, E, and F series and GPU NVadsA10 v5 series**)](https://learn.microsoft.com/en-us/azure/extended-zones/deploy-vm-portal)|
-| **Networking** | DDoS (Standard protection) <br> ExpressRoute <br> Private Link <br> Standard Load Balancer <br> Standard public IP <br> Virtual Network <br> Virtual Network Peering <br> [Azure Firewall*](https://learn.microsoft.com/en-us/azure/extended-zones/deploy-azure-firewall) (API version) |
-| **Storage** | Managed disks <br> - Premium SSD <br> - Standard SSD <br> [Storage Account](https://learn.microsoft.com/en-us/azure/extended-zones/create-storage-account) <br> - Premium Page Blobs <br> - Premium Block Blobs <br> - Premium Files <br> - Data Lake Storage Gen2 Hierarchical Namespace <br> - Data Lake Storage Gen2 Flat Namespace <br> - Change Feed <br> - Blob Features <br> - SFTP <br> - NFS|
-| Security | Key Vault |
-| **BCDR** | Azure Site Recovery* (Extended Zone to parent region) <br> Azure Backup |
-| **Arc-enabled PaaS** | [ContainerApps](https://learn.microsoft.com/en-us/azure/extended-zones/arc-enabled-workloads-container-apps)* <br> [ManagedSQL](https://learn.microsoft.com/en-us/azure/extended-zones/arc-enabled-workloads-managed-sql)* |
-| **Other** | Azure Policy* <br> Savings Plans <br> Reserved Instances (through recommendations flow) |
-
-\* While these services are GA in Azure Regions, they are currently in Preview in Azure Extended Zones.  
-\** [Learn more about Virtual Machine family series here](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview?tabs=breakdownseries%2Cgeneralsizelist%2Ccomputesizelist%2Cmemorysizelist%2Cstoragesizelist%2Cgpusizelist%2Cfpgasizelist%2Chpcsizelist). You can obtain a detailed VM list in the Azure Extended Zones environment. 
-
 Review the [Azure Extended Zone Services](https://learn.microsoft.com/en-us/azure/extended-zones/overview#service-offerings-for-azure-extended-zones) documentation for a list of services currently available.
 
 If you plan to use an Azure Extended Zone, evaluate the services and SKUs required for your solution to confirm availability. Contact your **Microsoft account team** for guidance on:
@@ -176,21 +156,9 @@ For details on each Service SLA and how it's calculated, please refer to the [Mi
 
 ## Independent Software Vendor Solutions
 
-**Independent Software Vendor (ISV)** marketplace offerings are deployable within the Azure Extended Zone. Below is a list of ISV offerings currently undergoing validation and their respective statuses.
+Review the [Supported software development companies
+](https://learn.microsoft.com/en-us/azure/extended-zones/overview#supported-software-development-companies) documentation for a list of validated Independent Software Vendor (ISV) solutions.
 
-| Vendor | Product(s) Name | Status |
-|---|---|---|
-| Aviatrix | Secure Networking Platform | Completed |
-| Fortinet | Fortinet FortiGate Next-Generation Firewall | Completed |
-| Checkpoint | Check Point CloudGuard Network Security Firewall & Threat Prevention | ISV validating |
-| Citrix | Citrix DaaS | ISV validating |
-| F5 Network | F5 Big IP BYOL | ISV validating |
-| NetApp | CVO | ISV validating |
-| Palo Alto | VM-Series Next-Generation Firewall from Palo Alto Networks | ISV validating |
-| Red Hat | Red Hat Enterprise Linux | ISV validating |
-
-> [!NOTE]
-> ISV validation statuses listed above were last confirmed in 2024. Contact your Microsoft account team for the latest validation status of these offerings.
 
 ## Pricing and Billing
 
