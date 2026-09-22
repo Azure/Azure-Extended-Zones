@@ -31,7 +31,6 @@ jobs:
         run: |
           mkdir -p _site/pricingcalculator
           cp -R pricing-calculator/web/. _site/pricingcalculator/
-          cp pricing-calculator/root-redirect.html _site/index.html
 
       - name: Upload pricing calculator as Pages artifact
         uses: actions/upload-pages-artifact@v3
