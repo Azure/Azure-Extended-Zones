@@ -5,7 +5,7 @@ This repository is the community and collaboration space for **Azure Extended Zo
 ## What you'll find here
 This repository focuses on:
 - [Azure Extended Zones Field Guide](./docs/field_guide/README.md)
-- [Azure Extended Zones pricing calculator](https://azure.github.io/Azure-Extended-Zones/)
+- [Azure Extended Zones pricing calculator](https://azure.github.io/Azure-Extended-Zones/pricingcalculator/)
 - Community Q&A and troubleshooting patterns
 - A place to propose improvements to repo docs, templates, and collaboration workflows
 
